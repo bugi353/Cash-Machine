@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="cashMachine.Controller.BalanceScreenController">
+   <children>
+      <Pane fx:id="balancePane" prefHeight="350.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="97.0" layoutY="72.0" text="Stan Twojego konta wynosi:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="acBalanceField" layoutX="261.0" layoutY="149.0" text="0000">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="530.0" layoutY="289.0" text="Wróć" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

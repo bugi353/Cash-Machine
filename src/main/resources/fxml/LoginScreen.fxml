@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="loginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashMachine.Controller.LoginScreenController">
+   <children>
+      <PasswordField fx:id="pinField" layoutX="207.0" layoutY="253.0" />
+      <Label layoutX="169.0" layoutY="191.0" text="Proszę podać PIN:">
+         <font>
+            <Font name="Calibri" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="179.0" layoutY="51.0" text="Proszę podać ID:">
+         <font>
+            <Font name="Calibri" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idField" layoutX="207.0" layoutY="107.0" />
+      <Label fx:id="badId" layoutX="283.0" layoutY="154.0" text="Label" textFill="#d60a0a" />
+      <Label fx:id="badPIN" layoutX="283.0" layoutY="300.0" text="Label" textFill="#d60a0a" />
+   </children>
+</Pane>

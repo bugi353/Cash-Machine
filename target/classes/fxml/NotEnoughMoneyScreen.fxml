@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="cashMachine.Controller.NotEnoughMoneyScreenController">
+   <children>
+      <Pane fx:id="nEMPane" prefHeight="350.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="81.0" layoutY="158.0" text="Niewystarczająca ilość środków na koncie">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>
