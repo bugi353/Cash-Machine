@@ -66,12 +66,13 @@ public class CashOperation {
 				account.setAccountAmount(account.getAccountAmount().subtract(value));
 				em.persist(t);
 				et.commit();
-				
+				System.out.println("jest ok");	
 				return cond = "true";
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				et.rollback();
+				System.out.println("cos poszlo nie tak");
 				return cond = "false";
 			}
 			

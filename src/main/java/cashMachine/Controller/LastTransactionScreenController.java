@@ -36,11 +36,7 @@ public class LastTransactionScreenController {
 	void initialize()
 	{
 		lastTransactionPane.setStyle("-fx-background-color: RGB(57, 135, 201)");
-		t1Label.setText(getTransaction(0));
-		t2Label.setText(getTransaction(1));
-		t3Label.setText(getTransaction(2));
-		t4Label.setText(getTransaction(3));
-		t5Label.setText(getTransaction(4));
+		
 	}
 
 	public void setConfiguration()
@@ -56,6 +52,11 @@ public class LastTransactionScreenController {
 		CMcontroller.buttonCancel.setOnAction(e->{});
 		CMcontroller.buttonCorrect.setOnAction(e->{});
 		CMcontroller.buttonAccept.setOnAction(e->{});
+		t1Label.setText(getTransaction(CMcontroller.getIdNumber(),0));
+		t2Label.setText(getTransaction(CMcontroller.getIdNumber(),1));
+		t3Label.setText(getTransaction(CMcontroller.getIdNumber(),2));
+		t4Label.setText(getTransaction(CMcontroller.getIdNumber(),3));
+		t5Label.setText(getTransaction(CMcontroller.getIdNumber(),4)); //wykonaæ zabezpieczenie jeœi mniej transakcji
 	}
 	
 	public void setController(CashMachineController CMcontroller)
@@ -63,9 +64,9 @@ public class LastTransactionScreenController {
 		this.CMcontroller = CMcontroller;
 	}
 	
-	public String getTransaction(int id)
+	public String getTransaction(String idNumber, int id)
 	{
-		Transaction transaction = cashOperation.getTransactions("123456", id);
+		Transaction transaction = cashOperation.getTransactions(idNumber, id);
 		String trans = "Data: " + transaction.getData() + " Kwota transakcji:" + transaction.getTransValue();
 		return trans;
 	}

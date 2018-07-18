@@ -104,6 +104,7 @@ public class LoginScreenController {
 		{
 			CMcontroller.setIdNumber(getIdFieldProperty());
 			CMcontroller.loadActionScreen();
+			System.out.println(CMcontroller.getIdNumber());
 		}
 	}
 }

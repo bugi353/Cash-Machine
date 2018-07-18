@@ -54,15 +54,17 @@ public class WithdrawScreenController {
 	
 	public void getCash(int val)
 	{
-		if(cashOperation.getCash(new BigDecimal(val), CMcontroller.getIdNumber()).equals("true"))
+		String cond;
+		cond = cashOperation.getCash(new BigDecimal(val), CMcontroller.getIdNumber());
+		if(cond.equals("true")) // tu do poprawy bo operacja wykonuje siê podwójnie
 		{
-			CMcontroller.loadFinishScreen();
+			CMcontroller.loadFinishScreen(); //trzeba obmyœleæ to inaczej ¿eby raz siê wykona³o i coœ zwróci³o
 		}
-		if(cashOperation.getCash(new BigDecimal(val), CMcontroller.getIdNumber()).equals("NEM"))
+		if(cond.equals("NEM"))
 		{
 			CMcontroller.loadNotEnoughMoneyScreen();
 		}
-		else
+		else if(cond.equals("false"))
 		{
 			CMcontroller.loadErrorScreen();
 		}
